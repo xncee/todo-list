@@ -1,0 +1,38 @@
+body {
+    background-color: var(--color-background);
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.navbar {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+.navLink:hover {
+    color: var(--color-accent)
+}
+
+.themeButton {
+    display: block;
+    background: none;
+    border: none;
+    position: sticky;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: var(--color-primary)
+}
+
+.themeButton:hover {
+    color: var(--color-accent);
+    transform: scale(1.1);
+}

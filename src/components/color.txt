@@ -1,0 +1,37 @@
+🎨 Color Palette Usage Guide
+✅ Accent 1: Taupe Beige (#bca88d)
+Use For: Accents, call-to-action buttons, highlights, or hover states
+
+Why: Warm and welcoming — adds a modern, friendly touch without overpowering other elements.
+
+✅ Primary Color / Text Color: Dark Olive Green (#3e3f29)
+Use For: Primary text, headings, labels, nav bars, footers, and buttons (especially in dark mode)
+
+Why: Strong and grounded. Provides excellent readability and visual weight on light backgrounds.
+
+✅ Secondary Color: Muted Sage (#7d8d86)
+Use For: Secondary backgrounds, cards, sidebars, borders, or icons
+
+Why: Calm and neutral. Offers soft contrast and helps separate content without being distracting.
+
+✅ Background Color: Ivory/Cream (#f0e4d4)
+Use For: Main backgrounds, body, form areas, or general light UI surfaces
+
+Why: Soft and clean, supports high readability and makes other colors stand out naturally.
+
+If you're building a design system, you might also label these with CSS variables or Tailwind-style tokens:
+
+
+✅ Where to Use Each Color (Mapped to Your UI)
+Key	Value	Use It For
+background	#f0e4d4	🧱 Page background, task input field background, section wrappers
+primary	#3e3f29	📝 Page title ("ToDo List"), nav bar links, key buttons, task text
+text	#3e3f29	✅ General text (same as primary in this case)
+secondary	#7d8d86	📦 Borders around task items, checkbox borders, muted outlines
+accent	#bca88d	🔘 Add Task button background, hover states, icon colors (edit/delete)
+// light:
+--color-primary: #3e3f29;
+--color-accent: #bca88d;
+--color-secondary: #7d8d86;
+--color-background: #f0e4d4;
+--color-text: #3e3f29;
