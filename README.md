@@ -24,6 +24,14 @@ Tasks are stored using **local browser storage**, ensuring data persists between
 
 ---
 
+## 📸 Screenshots
+
+![App Screenshot](public/assets/images/sc-light-and-dark.jpg)
+---
+![App Screenshot](public/assets/images/sc-light-with-mobile.jpg)
+
+---
+
 ## 🛠️ Tech Stack
 
 - **React** (with hooks and Context API)
@@ -109,15 +117,6 @@ This app was created as part of a React learning journey, with the goal of:
 - Managing global state using context
 - Exploring CSS variable-based theming and dynamic injection
 - Gaining experience with Vite and pnpm in a real-world project
-
----
-
-## 📸 Screenshots
-
-![App Screenshot](public/assets/images/sc-light-and-dark.jpg)
-![App Screenshot](public/assets/images/sc-light.png)
-![App Screenshot](public/assets/images/sc-dark.png)
-![App Screenshot](public/assets/images/sc-light-with-mobile.jpg)
 
 ---
 
