@@ -77,8 +77,8 @@ src/
 │   └── PageNotFound.jsx  
 ├── styles/
 │   └── themes/           # Light & dark theme variables
-|	    └── dark.js       
-|		└── light.js       
+│       ├── dark.js       
+│       └── light.js       
 ├── App.jsx               # Main app component
 ├── main.jsx              # Entry point for React
 
@@ -114,7 +114,10 @@ This app was created as part of a React learning journey, with the goal of:
 
 ## 📸 Screenshots
 
-(Optional: add your app screenshots here)
+![App Screenshot](public/assets/images/sc-light-and-dark.jpg)
+![App Screenshot](public/assets/images/sc-light.png)
+![App Screenshot](public/assets/images/sc-dark.png)
+![App Screenshot](public/assets/images/sc-light-with-mobile.jpg)
 
 ---
 
