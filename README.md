@@ -40,8 +40,8 @@ Tasks are stored using **local browser storage**, ensuring data persists between
 
 ```bash
 git clone https://github.com/xncee/todo-list
-cd todo-list-app
-
+cd todo-list
+```
 ### 2. Install dependencies using pnpm
 
 ```bash
@@ -77,7 +77,7 @@ src/
 │   └── PageNotFound.jsx  
 ├── styles/
 │   └── themes/           # Light & dark theme variables
-|		└── dark.js       
+|	    └── dark.js       
 |		└── light.js       
 ├── App.jsx               # Main app component
 ├── main.jsx              # Entry point for React
