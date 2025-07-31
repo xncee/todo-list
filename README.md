@@ -77,8 +77,8 @@ src/
 │   └── PageNotFound.jsx  
 ├── styles/
 │   └── themes/           # Light & dark theme variables
-|				└── dark.js       
-|				└── light.js       
+|		└── dark.js       
+|		└── light.js       
 ├── App.jsx               # Main app component
 ├── main.jsx              # Entry point for React
 
