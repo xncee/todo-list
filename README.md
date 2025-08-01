@@ -26,9 +26,11 @@ Tasks are stored using **local browser storage**, ensuring data persists between
 
 ## 📸 Screenshots
 
-![App Screenshot](public/assets/images/sc-light-and-dark.jpg)
+![App Screenshot](public/assets/images/sc-light-and-dark.png)
 ---
-![App Screenshot](public/assets/images/sc-light-with-mobile.jpg)
+![App Screenshot](public/assets/images/sc-light-with-mobile.png)
+---
+![App Screenshot](public/assets/images/sc-dark-with-mobile.png)
 
 ---
 
