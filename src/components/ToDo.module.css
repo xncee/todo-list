@@ -117,11 +117,7 @@
     transform: scale(1.25);
 }
 .deleteButton {
-    
     color: red;
-}
-.deleteButton:hover {
-    box-shadow: 0 0 8px 2px rgba(255, 0, 0, 0.4);
 }
 
 /* Responsive Design */
