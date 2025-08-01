@@ -1,13 +1,13 @@
 body {
     background-color: var(--color-background);
     font-family: "Poppins", sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 .navbar {
-    font-size: 1.5rem;
     display: flex;
-    gap: 25px;
     align-items: center;
+    gap: 25px;
+    font-size: 1.5rem;
     justify-content: center;
     margin-top: 25px;
 }
@@ -21,15 +21,16 @@ body {
 }
 
 .themeButton {
-    display: block;
+    display: flex;
     background: none;
-    border: none;
-    position: sticky;
     padding: 0;
     margin: 0;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     cursor: pointer;
-    color: var(--color-primary)
+    color: var(--color-primary);
+    padding: 8px;
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
 }
 
 .themeButton:hover {

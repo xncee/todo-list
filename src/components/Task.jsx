@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
-import { CiEdit, CiTrash } from "react-icons/ci";
+import { FiEdit2 } from "react-icons/fi";
+import { TiDeleteOutline } from "react-icons/ti";
 import { useTheme } from '../context/ThemeContext';
 import styles from './ToDo.module.css';
 
@@ -67,7 +68,7 @@ function Task(props) {
 				?
 					<textarea
 						className={`${styles.taskContent} ${styles.taskEdit}`}
-						size={Math.max(2, editText.length)}
+						checked
 						type='text'
 						value={editText}
 						onChange={handleInputChange}
@@ -90,13 +91,13 @@ function Task(props) {
 					className={styles.controlButton}
 					onClick={handleEdit}
 				>
-					<CiEdit size={18}/>
+					<FiEdit2 size={18}/>
 				</button>
 				<button
 					className={[styles.controlButton, styles.deleteButton].join(' ')}
 					onClick={props.onDelete}
 				>
-					<CiTrash size={18}/>
+					<TiDeleteOutline size={20}/>
 				</button>
 			</div>
         </div>

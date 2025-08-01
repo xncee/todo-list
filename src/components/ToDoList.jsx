@@ -56,7 +56,7 @@ export default function ToDoList() {
 	}
 
 	return (
-		<div id={styles.root}>
+		<div className={styles.container}>
 			<h1 className={styles.header}>
 				ToDo List
 			</h1>
