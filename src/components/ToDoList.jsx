@@ -63,7 +63,7 @@ export default function ToDoList() {
 			<div className={styles.addTaskContainer}>
 				<input
 					className={styles.taskInput}
-					placeholder='Enter you task'
+					placeholder='Enter your task'
 					type="text"
 					value={newTask}
 					onChange={handleInputChange}
