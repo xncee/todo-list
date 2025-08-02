@@ -1,0 +1,110 @@
+body {
+    position: relative;
+    background-color: var(--color-background);
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 1.5rem;
+    justify-content: center;
+    margin-top: 25px;
+}
+.navLink {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+.navLink:hover {
+    color: var(--color-accent)
+}
+
+.mobileNav {
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--color-background);
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 16px;
+    box-sizing: border-box;
+    z-index: 2000;
+}
+.line {
+    width: 26px;
+    height: 4px;
+    background-color: var(--color-accent);
+    margin: 2px 0;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+.menuBtn {
+    cursor: pointer;
+    flex-direction: column;
+    background: none;
+    border: none;
+}
+
+.themeButton {
+    cursor: pointer;
+    display: flex;
+    background: none;
+    padding: 0;
+    margin: 0;
+    color: var(--color-primary);
+    padding: 8px;
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.themeButton:hover {
+    color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .mobileNav {
+        display: flex;
+    }
+    .menuBtn {
+        display: flex;
+        z-index: 1000;
+    }
+    .navbar {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 25px;
+        background-color: var(--color-background);
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        margin: 0;
+        padding-top: 75px;
+        transition: all 0.3s ease; /* slide animation */
+        z-index: 1000;
+    }
+    .navbar.show {
+        left: 0;
+    }
+    .navbar > :nth-child() {
+        text-decoration: underline;
+    }
+}
+/* Phones + small tablets */
+@media (max-width: 768px) {
+
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+}

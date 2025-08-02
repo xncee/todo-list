@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { PageNotFound } from './pages/PageNotFound';
 import { NavBar } from './components/NavBar';
 import { ThemeProvider } from './context/ThemeContext';
-// import styles from './App.module.css';
+//import styles from '../styles/css/App.module.css';
 
 function App() {
 	return (
