@@ -34,7 +34,7 @@ export default function MobileNavBar() {
                     <div className={styles.hamburgerLine}></div>
                     <div className={styles.hamburgerLine}></div>
                 </button>
-                <ThemeSwitcher size={18} />
+                <ThemeSwitcher size={22} />
             </header>
 
             {/* Mobile Menu Dropdown */}
