@@ -76,8 +76,8 @@ export default function ToDoList() {
 			<div className={styles.addTaskContainer}>
 				<input
 					className={styles.taskInput}
-					placeholder='Enter your task'
 					type="text"
+					placeholder='Enter your task'
 					value={newTask}
 					onChange={handleInputChange}
 					onKeyDown={e => {
@@ -91,22 +91,35 @@ export default function ToDoList() {
 					Add task
 				</button>
 			</div>
-			<div className={styles.tasksContainer}>
-				{
-					toDoList.map((task, i) => {
-						return (
-							<Task
-								key={i}
-								animationDelay={firstRender ? i * 0.1 : 0}
-								text={task["text"]}
-								isCompleted={task["completed"]}
-								changeStatus={(status) => {changeTaskStatus(i, status)}}
-								onEdit={(newText) => {editTask(i, newText)}}
-								onDelete={() => {deleteTask(i)}}
-							/>
-						);
-					})
-				}
+			<div className={styles.tasksSection}>
+				<div className={styles.controlArea}>
+					{toDoList.length > 0 &&
+						<button
+							disabled={toDoList.length === 0}
+							className={styles.clearAllBtn}
+							onClick={() => setToDoList([])}
+						>
+							Clear All
+						</button>
+					}
+				</div>
+				<div className={styles.tasksList}>
+					{
+						(toDoList).map((task, i) => {
+							return (
+								<Task
+									key={i}
+									animationDelay={firstRender ? i * 0.1 : 0}
+									text={task["text"]}
+									isCompleted={task["completed"]}
+									changeStatus={(status) => {changeTaskStatus(i, status)}}
+									onEdit={(newText) => {editTask(i, newText)}}
+									onDelete={() => {deleteTask(i)}}
+								/>
+							);
+						})
+					}
+				</div>
 			</div>
 		</div>
 	);

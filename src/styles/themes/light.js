@@ -4,6 +4,7 @@ const lightTheme = {
   'accent': '#9DAD7F',
   'primary': '#557174',
   'text': '#557174',
+  'destructive': '#D9534F',
 };
 
 export default lightTheme;
