@@ -1,7 +1,7 @@
 
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { useTheme } from '../context/ThemeContext';
-import styles from '../App.module.css'
+import styles from '../styles/css/App.module.css';
 
 const LOCAL_STORAGE_KEY = "preferences";
 

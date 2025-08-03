@@ -48,14 +48,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
     margin-top: 48px;
     font-family: 'Inter', sans-serif;
 }
 
 .task {
+    font-size: 16px;
     display: flex;
     flex-direction: row;
+    gap: 10px;
     align-items: flex-start;
     width: 100%;
     max-width: 600px;
@@ -64,6 +66,18 @@
     border-radius: 8px;
     padding: 16px;
     box-sizing: border-box;
+}
+.slideInTask {
+    animation: slideInFromLeft 0.3s ease-out forwards;
+    animation-delay: var(--animation-delay, 0s);
+    transform: translateX(-100%);
+    opacity: 0;
+}
+@keyframes slideInFromLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .taskCheckBox {
@@ -76,23 +90,20 @@
 }
 
 .taskContent {
-    color: var(--color-text);
-    margin-right: 10px;
     flex: 1;
+    font-weight: bolder;
+    color: var(--color-text);
     line-height: 1.25;
     word-break: break-word;
-    padding: 0 16px;
 }
 .taskContent:hover {
     color: var(--color-accent);
 }
 
 .taskEdit {
-    display: flex;
-    max-height: 100px;
+    width: 100%;
     field-sizing: content;
     resize: none;
-    margin: 0;
     background-color: var(--color-background);
     outline: none;
     border: 1px solid var(--color-secondary);
@@ -130,12 +141,14 @@
         flex-direction: column;
     }
 }
+@media (max-width: 420px) {
+    .task {
+        max-width: 95%;
+    }
+}
 @media (max-width: 320px) {
     .task {
         max-width: 100%;
         font-size: 14px;
-    }
-    .taskContent {
-        padding: 0 2px;
     }
 }

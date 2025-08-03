@@ -2,19 +2,22 @@ import {useState, useEffect} from 'react';
 import { FiEdit2 } from "react-icons/fi";
 import { TiDeleteOutline } from "react-icons/ti";
 import { useTheme } from '../context/ThemeContext';
-import styles from './ToDo.module.css';
+import styles from '../styles/css/ToDo.module.css';
 
 function Task(props) {
 	const { theme } = useTheme();
     const [editText, setEditText] = useState(props.text);
     const [isEditing, setEditing] = useState(false);
 
-	const handleInputChange = (e) => {
-        setEditText(e.target.value);
-    }
+	
 	const handleEdit = () => {
 		if (!isEditing) setEditing(true)
 	};
+
+	const handleInputChange = (e) => {
+		setEditText(e.target.value);
+	};
+	
     const handleStatus = () => {
         props.changeStatus(!props.isCompleted);
     };
@@ -51,8 +54,10 @@ function Task(props) {
 
     return (
         <div
-			className={styles.task}
-			onDoubleClick={handleEdit}
+			className={[styles.task, styles.slideInTask].join(' ')}
+			style={{
+				'--animation-delay': `${props.animationDelay || 0}s`
+			}}
 		>
 			<input
 				className={styles.taskCheckBox}
@@ -62,13 +67,13 @@ function Task(props) {
 			/>
 			<div
 				className={styles.taskContent}
+				onDoubleClick={handleEdit}
 			>
 				{
 				isEditing
 				?
 					<textarea
-						className={`${styles.taskContent} ${styles.taskEdit}`}
-						checked
+						className={[styles.taskContent, styles.taskEdit].join(' ')}
 						type='text'
 						value={editText}
 						onChange={handleInputChange}

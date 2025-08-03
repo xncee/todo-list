@@ -1,10 +1,11 @@
 import {useState, useEffect} from 'react';
-import styles from './ToDo.module.css';
+import styles from '../styles/css/ToDo.module.css';
 import Task from './Task';
 
 const LOCAL_STORAGE_KEY = 'tasks';
 
 export default function ToDoList() {
+	const [firstRender, setFirstRender] = useState(true);
     const [newTask, setNewTask] = useState('');
 	const [toDoList, setToDoList] = useState(() => {
 		const storedList = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -15,6 +16,19 @@ export default function ToDoList() {
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(toDoList));
     }, [toDoList]);
 	
+	// This effect will be triggered on first render only.
+	// It sets a timeout to change firstRender state to false after all tasks are rendered.
+	// Tasks are displayed with an animation and specific delay.
+	// The animation should be applied only once, when the tasks are first rendered.
+	// so we set firstRender state to false after the first render.
+	// This way, the animation will not be applied again when the tasks are updated.
+	// Check firstRender state usage in this component for more details.
+	useEffect(() => {
+    	setTimeout(() => {
+        setFirstRender(false);
+    }, toDoList.length*100 + 50); // (number of tasks * 0.1s delay) + buffer
+	}, []);
+
 	const handleInputChange = (e) => {
 		setNewTask(e.target.value)
 	};
@@ -33,7 +47,6 @@ export default function ToDoList() {
 				return index !== i
 			})
 		);
-		console.log(toDoList);
 	};
 
 	const changeTaskStatus = (i, status) => {
@@ -84,6 +97,7 @@ export default function ToDoList() {
 						return (
 							<Task
 								key={i}
+								animationDelay={firstRender ? i * 0.1 : 0}
 								text={task["text"]}
 								isCompleted={task["completed"]}
 								changeStatus={(status) => {changeTaskStatus(i, status)}}
