@@ -47,6 +47,7 @@
 .tasksSection {
     display: flex;
     flex-direction: column;
+    gap: 6px;
     justify-content: flex-start;
     align-self: center;
     width: 100%;
@@ -70,6 +71,7 @@
     background: none;
     border: none;
     color: var(--color-destructive);
+    padding: 0;
 }
 .clearAllBtn:hover {
     transform: scale(1.05);
