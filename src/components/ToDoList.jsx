@@ -110,7 +110,7 @@ export default function ToDoList() {
 							return (
 								<Task
 									key={i}
-									animationDelay={firstRender ? i * TASK_ANIMATION_DURATION : 0}
+									animationDelay={firstRender ? i * TASK_ANIMATION_DURATION/1000 : 0}
 									text={task["text"]}
 									isCompleted={task["completed"]}
 									changeStatus={(status) => {changeTaskStatus(i, status)}}
