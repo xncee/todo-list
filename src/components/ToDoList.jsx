@@ -3,6 +3,7 @@ import styles from '../styles/css/ToDo.module.css';
 import Task from './Task';
 
 const LOCAL_STORAGE_KEY = 'tasks';
+const TASK_ANIMATION_DURATION = 50; // in ms
 
 export default function ToDoList() {
 	const [firstRender, setFirstRender] = useState(true);
@@ -26,7 +27,7 @@ export default function ToDoList() {
 	useEffect(() => {
     	setTimeout(() => {
         setFirstRender(false);
-    }, toDoList.length*100 + 50); // (number of tasks * 0.1s delay) + buffer
+    }, toDoList.length*TASK_ANIMATION_DURATION + 50); // (number of tasks * 0.05s delay) + buffer
 	}, []);
 
 	const handleInputChange = (e) => {
@@ -109,7 +110,7 @@ export default function ToDoList() {
 							return (
 								<Task
 									key={i}
-									animationDelay={firstRender ? i * 0.1 : 0}
+									animationDelay={firstRender ? i * TASK_ANIMATION_DURATION : 0}
 									text={task["text"]}
 									isCompleted={task["completed"]}
 									changeStatus={(status) => {changeTaskStatus(i, status)}}
